@@ -1,11 +1,10 @@
 package to;
 
 public class Scooter extends Bicicleta implements Rueda{
-	public Scooter(){}
     private int antiguedad;
     
-	public Scooter(int antiguedad) {
-		super();
+	public Scooter(String propietario, int tamRuedas,int antiguedad) {
+		super(propietario, tamRuedas);
 		this.antiguedad = antiguedad;
 	}
 	
@@ -15,8 +14,7 @@ public class Scooter extends Bicicleta implements Rueda{
 	}
 
 	@Override
-	public void detener() {
-		System.out.println("El Scooter se detuvo!");	
+	public String toString() {
+		return "Scooter [antiguedad= " + antiguedad + ", tamanio de ruedas=" + numRuedas + "cm, propietario= " + propietario + "]";
 	}
-	
 }
